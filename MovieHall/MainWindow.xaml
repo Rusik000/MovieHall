@@ -8,24 +8,60 @@
         Title="MovieHall" Height="800" Width="1000" FontSize="60">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition  Height="5*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition  Height="3*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition  Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            
-        <TextBox Width="400" Height="60" VerticalAlignment="Top" Margin="30" Background="Wheat" FontSize="40" FontFamily="Times New Roman">
-            
-        </TextBox>
-            <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="30">
-                <Image Stretch="Fill"  Source="Images/Search.png" >
-                    
+            <Canvas Background="WhiteSmoke">
+
+                <Image Name="MovieImage" Width="1000" Height="200" Stretch="Fill" Opacity="1" Canvas.Top="6" >
+                    <Image.Effect>
+                        <BlurEffect Radius="20" KernelType="Gaussian"></BlurEffect>
+                    </Image.Effect>
                 </Image>
-                
-            </Button>
-            
+
+
+
+                <TextBox Name="MovieTextBox"  Canvas.Left="130"   Opacity="2" Width="600" Height="60"  Margin="30" Background="Wheat" FontSize="40" FontFamily="Times New Roman"></TextBox>
+
+                <Button   ToolTip="Click Double" Name="Search"  Width="100" Height="60" Canvas.Right="60"  Opacity="2"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="30" MouseDoubleClick="Search_MouseDoubleClick">
+                    <Image Stretch="Fill"  Source="Images/Search.png"></Image>
+                </Button>
+
+
+                <Image Name="MovieImage2" Width="300" Height="270" Canvas.Top="200" Stretch="Fill" >
+
+                </Image>
+
+            </Canvas>
         </Grid>
+
+
+        <Grid Grid.Row="1">
+
+            <StackPanel Width="400" Margin="20"  >
+
+                <Label Name="MovieLabel" Background="WhiteSmoke" Width="400" Height="50" Margin="10" VerticalAlignment="Top"  FontSize="20" FontWeight="Bold" FontFamily="Times New Roman"  >
+
+                </Label>
+                <Label Name="MovieLabel1" Background="WhiteSmoke" Width="400" Height="50" Margin="10" VerticalAlignment="Center"   FontSize="20" FontWeight="Bold" FontFamily="Times New Roman"  >
+
+                </Label>
+
+                <Label Name="MovieLabel2" Background="WhiteSmoke" Width="400" Height="50"  Margin="10" VerticalAlignment="Bottom"  FontSize="20" FontWeight="Bold" FontFamily="Times New Roman"  >
+
+                </Label>
+
+                <Label Name="MovieLabel3" Background="WhiteSmoke" Width="400" Height="50" Margin="10" VerticalAlignment="Bottom"  FontSize="20" FontWeight="Bold" FontFamily="Times New Roman"  >
+
+                </Label>
+
+            </StackPanel>
+        </Grid>
+
+
     </Grid>
 </Window>
