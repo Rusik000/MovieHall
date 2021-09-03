@@ -71,6 +71,14 @@ namespace MovieHall
             MovieLabel2.Content = "Minute : " + Minute;
             MovieLabel3.Content = "Rating : " + Ratings;
 
+            double rating = double.Parse(Ratings);
+
+            if (rating>1)
+            {
+                StarImage1.Source = new BitmapImage(new Uri(@"Images/HalfStar.png"));
+
+            }
+
             // Task For next 
             // Gelen kimi ulduzlari duzeldirsen 
             // Yumru button yazirsan sekilin ustune ve click edende youtube fragman cixmalidir

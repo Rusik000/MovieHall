@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieHall"
         mc:Ignorable="d"
-        Title="MovieHall" Height="800" Width="1000" FontSize="60">
+        Title="MovieHall" Height="800" Width="1000" ResizeMode="NoResize" FontSize="60">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition  Height="3*"/>
@@ -60,6 +60,27 @@
                 </Label>
 
             </StackPanel>
+            <Canvas>
+                <Image  x:Name="StarImage1" Source="Images/EmtpyStar.PNG" Canvas.Right="240" Canvas.Bottom="30" Width="50" Height="50" Stretch="Fill" >
+                    
+                </Image>
+
+                <Image  x:Name="StarImage2"   Canvas.Right="180" Canvas.Bottom="30" Width="50" Height="50" Stretch="Fill" Source="Images/EmtpyStar.PNG">
+
+                </Image>
+
+                <Image  x:Name="StarImage3"  Canvas.Right="120" Canvas.Bottom="30" Width="50" Height="50" Stretch="Fill" Source="Images/EmtpyStar.PNG">
+
+                </Image>
+                <Image  x:Name="StarImage4"  Canvas.Right="60" Canvas.Bottom="30" Width="50" Height="50" Stretch="Fill" Source="Images/EmtpyStar.PNG">
+
+                </Image>
+
+                <Image  x:Name="StarImage5"  Canvas.Right="0" Canvas.Bottom="30" Width="50" Height="50" Stretch="Fill" Source="Images/EmtpyStar.PNG">
+
+                </Image>
+
+            </Canvas>
         </Grid>
 
 
